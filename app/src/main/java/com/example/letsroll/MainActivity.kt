@@ -23,10 +23,6 @@ class MainActivity : AppCompatActivity() {
         if(DiceImageResoure != -1) {
             diceImage.setImageResource(DiceImageResoure)
         }
-        var UI_Button :Button = findViewById(R.id.button)
-        UI_Button.setOnClickListener() {
-            Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show()
-        }
         dice_button.setOnClickListener() {
             Roll()
         }

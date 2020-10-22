@@ -48,4 +48,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation "android.arch.work:work-runtime-ktx:2.4.0"
 
+    //RX-Android
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    //RX-Java
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
 }
