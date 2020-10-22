@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
+import java.lang.Thread.sleep
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +32,18 @@ class MainActivity : AppCompatActivity() {
             Roll()
         }
     }
+    public class myRunnable: Runnable {
+        override fun run() {
+            sleep(2000)
+            MainActivity().Roll()
+        }
+    }
 
+    public fun Roll_thread() {
+        var runnable =  myRunnable()
+        var myThread = Thread(runnable)
+        myThread.run()
+    }
     public fun Roll() {
         viewModel.rollDice()
         DiceImageResoure = viewModel.getImageResource()
