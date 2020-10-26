@@ -1,14 +1,10 @@
 package com.example.letsroll
 
 import androidx.lifecycle.ViewModel
-import java.lang.Thread.sleep
 import java.util.*
-import java.util.concurrent.Executor
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
 
-class DiceViewModel : ViewModel() {
 
+open class DiceViewModel : ViewModel() {
     private var imageResource: Int = -1
 
     fun rollDice() {
