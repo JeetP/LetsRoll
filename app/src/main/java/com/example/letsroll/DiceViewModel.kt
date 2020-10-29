@@ -1,9 +1,6 @@
 package com.example.letsroll
 
 import androidx.lifecycle.ViewModel
-import androidx.work.OneTimeWorkRequest
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
 import java.lang.Thread.sleep
 import java.util.*
 import java.util.concurrent.Executor
@@ -13,7 +10,6 @@ import java.util.concurrent.Executors
 class DiceViewModel : ViewModel() {
 
     private var imageResource: Int = -1
-
 
     fun rollDice() {
         val randomInt = Random().nextInt(6) + 1
